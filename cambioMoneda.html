@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambio de Moneda</title>
+    <link rel="stylesheet" href="/Css/cambioMonedas.css">
 </head>
 <body>
+
+    <header>
+
+        <!-- titulo prinicipal -->
+        <h1>Cambio de Moneda</h1>
+
+        <!-- <p>Bienvenidos a nuestro proyecto sobre los Algoritmos Voraces, en el cual podran aprender, entender y probar su funcionamiento. </p> -->
+
+    </header>
 
     <!-- Menu de navegacion para los algoritmos -->
     <nav>
@@ -18,6 +28,97 @@
         </div>
     </nav>
     
+
+        <!-- Descripcion de el cambio de moneda -->
+    <section>
+
+        <h2>📌 Algoritmo Voraz – Cambio de Moneda</h2>
+        <p>
+            El problema de cambio de moneda consiste en dar una cantidad de dinero usando el menor número posible de monedas. El enfoque voraz lo resuelve eligiendo siempre <strong>la moneda de mayor valor posible</strong> que no supere la cantidad restante por dar.
+        </p>
+        <img src="/img/cambioMoneda.png" width="500">
+
+    </section>
+
+    <!-- funcionamiento del algoritmo -->
+    <section>
+
+        <h2>Funcionamiento</h2>
+        <ul>
+            <li>Se ordenan las monedas de <strong>mayor a menor</strong> valor.</li>
+            <li>Mientras la cantidad a devolver sea mayor que 0:</li>
+            <ul>
+                <li>Se toma la moneda de mayor valor posible.</li>
+                <li>Se resta su valor a la cantidad restante.</li>
+                <li>Se repite el proceso hasta que la cantidad sea 0.</li>
+            </ul>
+        </ul>
+
+    </section>
+
+
+<!-- CARACTERISTICAS -->
+    <section>
+
+        <h2>Caracteristicas</h2>
+        <ul>
+            <li>Siempre prioriza la moneda de mayor valor en cada paso.</li>
+            <li>Es rápido y fácil de aplicar mentalmente o en un programa.</li>
+            <li>Da la solución óptima solo si el sistema de monedas cumple ciertas condiciones <i>(por ejemplo, el sistema de monedas común de muchos países).</i></li>
+        </ul>
+
+    </section>
+
+
+    <!-- ventajas y desventajas -->
+    <section>
+
+        <h2>Puntos a tomar en cuenta</h2>
+
+        <h3>Ventajas</h3>
+        <ul>
+            <li>Sencillo de entender y ejecutar.</li>
+            <li>Muy rápido, incluso para cantidades grandes.</li>
+            <li>Funciona perfectamente en sistemas de monedas bien diseñados.</li>
+        </ul>
+
+        <h3 class="desventajas">Desventajas</h3>
+        <ul>
+            <li>No siempre garantiza la menor cantidad de monedas en sistemas de monedas “problemáticos” <i>(por ejemplo, donde ciertas combinaciones dan un mejor resultado que la elección directa de las monedas más grandes).</i></li>    
+            <li>No reconsidera elecciones previas si resultaron poco convenientes.</li>
+
+        </ul>
+
+    </section>
+
+<!-- Area para ponerlo aprueba. -->
+    <section>
+
+        <h2>Prueba el algoritmo</h2>
+        
+        <!-- Inputs del usuario -->
+        <div>
+            <label for="monto">Monto a cambiar (centavos):</label>
+            <input type="number" id="monto" min="1" placeholder="Ingrese un monto">
+        </div>
+        
+        <div>
+            <label for="monedas">Monedas disponibles (separadas por comas):</label>
+            <input type="text" id="monedas" value="25, 10, 5, 1">
+        </div>
+        
+        <button id="calcular">Calcular</button>
+
+        <!-- Resultado -->
+        <div id="resultado">
+            <h3>Resultado:</h3>
+            <p id="monedas-usadas">Monedas usadas: </p>
+            <p id="total-monedas">Total de monedas: </p>
+        </div>
+
+    </section>
+
+
     <!-- Un basico Pie de pagina -->
     <footer>
         <hr>
@@ -28,5 +129,6 @@
         </ul>
     </footer>
 
+    <script src="/Js/cambioMoneda.js"></script>
 </body>
 </html>
