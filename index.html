@@ -4,8 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoritmos Voraces</title>
+    <link rel="stylesheet" href="/Css/index.css">
 </head>
 <body>
-    <h1>Titulo Pagina</h1>
+    
+    <header>
+        <!-- TITULO principal -->
+        <h1>ALGORITMOS VORACES</h1>
+
+        <p>Bienvenidos a nuestro proyecto sobre los Algoritmos Voraces, en el cual podran aprender, entender y probar su funcionamiento. </p>
+
+    </header>
+
+<!-- Menu de navegacion para los algoritmos -->
+    <nav>
+        <h2>Explora los Algoritmos:</h2>
+        <div>
+            <a href="index.html"><button>Inicio</button></a>
+            <a href="cambioMoneda.html"><button>Cambio de Monedas</button></a>
+            <a href="mochila.html"><button>Mochila Fraccionaria</button></a>
+            <a href="algoritmo3.html"><button>Planificación de Tareas</button></a>
+        </div>
+    </nav>
+
+
+    <!-- Descripcion Del concepto -->
+    <section>
+
+        <h2>¿Qué son los algoritmos voraces?</h2>
+        <p>
+            Un algoritmo voraz <i>(greedy algorithm en inglés)</i> es un método de resolución de problemas que toma decisiones paso a paso, eligiendo en cada momento la opción que parece más beneficiosa o “mejor” según un criterio local, con la esperanza de que esta elección lleve a la solución óptima global.
+
+            <br>
+
+            En otras palabras, en cada paso el algoritmo toma la decisión que produce el mayor beneficio inmediato, sin reconsiderar las elecciones anteriores. La idea es que, si cada elección local es óptima, el resultado final también lo será, aunque esto solo funciona en ciertos problemas donde la estructura permite que lo local óptimo lleve a lo global óptimo.
+        </p>
+
+        <img src="/img/voraz.jpg" width="500">
+
+
+    </section>
+
+    <!-- APARTADO DEL FUNCIONAMIENTO -->
+    <section>
+
+        <h2>Funcionamiento del Algoritmo</h2>
+
+        <p>
+            Definir un criterio para saber qué opción es “mejor” en cada paso.<br>
+            Elegir siempre la opción más favorable según ese criterio, sin mirar atrás.<br>Fijar la decisión y no cambiarla después.<br>
+            Repetir el proceso hasta que el problema quede resuelto.<br>
+        </p>
+
+    </section>
+
+<!-- CARACTEROISTICAS -->
+    <section>
+
+        <h2>Caracteristicas </h2>
+        <p>Algunas de las caracteristicas mas importantes son :</p>
+        <lu>
+            <li>Toma <strong>decisiones locales óptimas</strong> esperando que eso lleve a una <strong>solución global óptima</strong></li>
+            <li>Es rápido y fácil de implementar.</li>
+        </lu>
+
+    </section>
+
+    <!-- VENTAJAS Y DESVENTAJAS -->
+    <section>
+
+        <h2>Puntos a tener encuenta</h2>
+
+        <h3>Ventajas</h3>
+        <ul>
+            <li><strong>Simplicidad</strong> : fáciles de entender y programar.</li>
+            <li><strong>Rapidez</strong> suelen ejecutarse en poco tiempo.</li>
+            <li>Eficiencia en problemas grandes donde un método exacto sería demasiado lento.</li>
+        </ul>
+
+        <h3>Desventajas</h3>
+        <ul>
+            <li>No garantizan la solución perfecta en todos los casos.</li>
+            <li>Solo son fiables en problemas que cumplen las propiedades necesarias.</li>
+            <li>Una mala decisión inicial no se corrige después.</li>
+        </ul>
+
+    </section>
+
+    <!-- un ejemplo para dar -->
+    <section>
+
+        <h3>Ejemplo de Compresion</h3>
+        <p>Si queremos dar cambio con monedas y siempre usamos primero la moneda de mayor valor posible, ese sería un enfoque voraz. Funcionará bien en algunos sistemas de monedas, pero en otros puede que no dé el cambio óptimo.</p>
+
+    </section>
+
+    <!-- Un basico Pie de pagina -->
+    <footer>
+        <hr>
+        <p><strong>Integrantes del proyecto:</strong></p>
+        <ul>
+            <li>Osvin Jossue Alvarado Leiva - jossuealvarado29@gmail.com</li>
+            <li>Jose Camilo Alvarado Leiva - josecamilo2404@gmail.com</li>
+        </ul>
+    </footer>
+
+
 </body>
+
+
+
 </html>
