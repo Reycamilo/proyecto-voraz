@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mochila Fraccionaria - Algoritmo Voraz</title>
+</head>
+<body>
+                                        <!-- Titulo -->
+    <header>
+    <h1>Mochila Fraccionaria</h1>
+    </header>  
+                                        <!-- Fin Titulo -->
+
+                                         <!-- Menu -->
+    <nav>
+        <h2>Explora los Algoritmos:</h2>
+        <div>
+            <a href="index.html"><button>Inicio</button></a>
+            <a href="cambioMoneda.html"><button>Cambio de Monedas</button></a>
+            <a href="mochila.html"><button>Mochila Fraccionaria</button></a>
+            <a href="algoritmo3.html"><button>Planificación de Tareas</button></a>
+        </div>
+    </nav>
+                                        <!-- Fin Menu -->
+
+                                        <!-- Descripción -->
+    <section>
+        <h2> Mochila Fraccionaria - Algoritmo Voraz</h2>
+            <p>
+            El problema de la mochila plantea un desafío: tienes una mochila con espacio limitado y varios objetos con diferentes pesos y valores. Tu misión es decidir cuáles llevar para obtener la mayor ganancia posible sin pasarte del límite. Suena simple... hasta que empiezas a elegir.
+            </p>
+
+    </section>
+                                    <!-- Fin Descripción -->
+
+                                     <!-- Funcionamiento -->
+    <section>
+    <h2>Funcionamiento</h2>
+        <p>
+        Para resolver la mochila fraccionaria, primero se ordenan los objetos según su relación valor/peso, de mayor a menor. Luego, se van añadiendo a la mochila empezando por el que ofrece más valor por cada unidad de peso. Si un objeto no cabe completo, se toma solo la parte que entra. Así, se aprovecha al máximo el espacio disponible.
+        </p>
+    <ol>
+        <li>Calcular la relación valor/peso de cada objeto y ordenarlos de mayor a menor.</li>
+        <li>Colocar los objetos en la mochila empezando por el de mayor valor/peso.</li>
+        <li>Si un objeto cabe completo, lo añadimos entero a la mochila.</li>
+        <li>Si un objeto no cabe completo, añadimos solo la fracción que entre.</li>
+        <li>Repetir el proceso hasta llenar la mochila o quedarse sin objetos.</li>
+    </ol>
+
+
+    </section>
+                                     <!-- Fin Funcionamiento -->
+                                      <!-- Ventajas y Desventajas -->
+    <section>
+        <h3 class="ventajas">Ventajas</h3>
+        <ul>
+            <li>Siempre se obtiene la solución óptima con el enfoque voraz.</li>
+            <li>Permite flexibilidad al tomar fracciones de objetos.</li>
+            <li>Fácil de entender incluso para principiantes en algoritmos.</li>
+            <li>Sirve para aprender el concepto de “selección óptima” usando un enfoque voraz.</li>
+        </ul>
+        <h3 class="desventajas">Desventajas</h3>
+        <ul>
+            <li>No aplica a problemas donde no se pueda fraccionar un objeto.</li>
+            <li>No siempre es útil en situaciones reales (por ejemplo, no puedes llevar “medio” teléfono).</li>
+        </ul>
+    </section>
+                                      <!-- Fin Ventajas y Desventajas -->
+
+                                            <!-- Ejemplo -->
+    <section>
+    <h2>Ejemplo Practico</h2>
+        
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/300px-Knapsack.svg.png" alt="">
+    <p>Imagina que tenemos una mochila como la de la imagen de arriba, con una capacidad de 15kg máximos.
+        ¿Como ordenarías  los objetos con mayor valor/peso en la mochila sin excederte en el peso? <br>
+        El primer objeto en colocar seria el amarillo y nos quedaría una capacidad de 11 kg. Después el gris y la capacidad seguiría restando luego el azul y después el naranja quedándonos con una capacidad de 7 kg.
+        Como el objeto verde pesa 12 kg y en la mochila solo quedan 7 kg disponibles, entonces podríamos fraccionarlo y meter 7 kg del objeto verde dentro de la mochila, pero su valor ya no seria de 4 $ seria de 2.33 $. Entonces asi la mochila estaría 
+        llena y con un valor aproximado de 17.33 $
+    </p>
+    </section>
+                                        <!-- Fin Ejemplo -->
+                                         <!-- Área interactiva -->
+  
+    <h2>Área Interactiva</h2>
+    <form id="formObjetos">
+    <label>Capacidad de la mochila (peso máximo): 
+      <input type="number" id="capacidad" min="1" required placeholder="Ingrese capacidad en kg"/>
+    </label>
+
+    <h3>Agregar objetos</h3>
+    <label>Peso:
+      <input type="number" id="peso" min="0.01" step="0.01" placeholder="Ingrese un peso en Kg" />
+    </label>
+    <label>Valor:
+      <input type="number" id="valor" min="0.01" step="0.01" placeholder="Ingrese un precio" />
+    </label>
+    <button type="button" id="agregarObjeto">Agregar objeto</button>
+
+    <table id="tablaObjetos" border="1" cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>#</th><th>Peso</th><th>Valor</th><th>Valor/Peso</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button type="submit">Calcular solución voraz</button>
+  </form>
+
+  <div id="resultado"></div>
+                                  <!-- Fin de Área interactiva -->
+
+  <footer>
+        <hr>
+        <p><strong>Integrantes del proyecto:</strong></p>
+        <ul>
+            <li>Osvin Jossue Alvarado Leiva - jossuealvarado29@gmail.com</li>
+            <li>Jose Camilo Alvarado Leiva - josecamilo2404@gmail.com</li>
+        </ul>
+    </footer>
+<script src="/js/mochila.js"></script>
+</body>
+</html>
