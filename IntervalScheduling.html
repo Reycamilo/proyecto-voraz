@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificación de Tareas</title>
+    <link rel="stylesheet" href="/Css/IntervalScheduling.css">
+</head>
+<body>
+    <!-- Titulo -->
+     <header>
+     <h1>Planificación De Tareas</h1>
+    </header>
+    <!-- Fin Titulo -->
+
+    <!-- Menu -->
+     <nav>
+        <h2>Explora los Algoritmos:</h2>
+        <div>
+            <a href="index.html"><button>Inicio</button></a>
+            <a href="cambioMoneda.html"><button>Cambio de Monedas</button></a>
+            <a href="mochila.html"><button>Mochila Fraccionaria</button></a>
+            <a href="IntervalScheduling.html"><button>Planificación de Tareas</button></a>
+        </div>
+    </nav>
+     <!-- Fin Menu -->
+
+     <!-- Descripción -->
+      <section>
+        <h2>📌Algoritmos Voraz - Planificación de Tareas</h2>
+        <p>El Algoritmo de Planificación de Tareas es un método para organizar actividades que tienen un inicio y un fin definidos, de manera que podamos hacer la mayor cantidad posible sin que se empalmen o se superpongan en el tiempo.</p>
+      </section>
+      <!-- Fin Descripción -->
+
+      <!-- Funcionamiento -->
+       <section>
+        <h2>Funcionamiento</h2>
+                <p>La idea principal es elegir siempre la tarea que termina más rápido, para así dejar espacio para realizar otras actividades después. De esta forma, se aprovecha el tiempo de manera eficiente, evitando conflictos entre tareas.
+                Este enfoque garantiza que se selecciona el máximo número de tareas compatibles, es decir, que no se crucen en el tiempo, logrando una planificación óptima.
+                </p>
+        <ol>
+            <li>Ordena las tareas según su tiempo de finalización (de menor a mayor).</li>
+            <li>Selecciona la primera tarea de la lista (la que termina más rápido).</li>
+            <li>Elimina todas las tareas que se solapen con la tarea seleccionada.</li>
+            <li>Repite el proceso con las tareas que quedan.</li>
+            <li>El conjunto de tareas seleccionadas es la solución óptima.</li>
+        </ol>
+       </section>
+       <!-- Fin Funcionamiento -->
+
+        <!-- Ventajas y Desventajas -->
+         <section>
+            <h2>Puntos a Tomar en Cuenta</h2>
+            <h3 class="ventajas">Ventajas</h3>
+            <ul>
+                <li>Fácil de entender e implementar. Ordenas, seleccionas, eliminas y listo.</li>
+                <li>Garantiza encontrar el máximo número posible de tareas que no se solapen, en problemas donde solo importa la cantidad.</li>
+                <li>Útil para muchas situaciones reales: programación de citas, uso de recursos, reservaciones, etc.</li>
+            </ul>
+            <h3 class="desventajas">Desventajas</h3>
+            <ul>
+                <li>Solo importa cuándo termina una tarea, no su importancia o valor. Si tienes tareas más valiosas pero más largas, este algoritmo no las prioriza.</li>
+                <li>Si las tareas tienen distintos beneficios o costos, este método no garantiza maximizar la ganancia total.</li>
+                <li>Asume que una vez que empiezas una tarea, la haces hasta el final sin pausas ni cortes.</li>
+                <li>Si algunas tareas dependen de que otras terminen, este algoritmo no las considera.</li>
+            </ul>
+         </section>
+         <!-- Fin Ventajas y Desventajas -->
+
+         <!-- Ejemplo Practico -->
+          <section>
+            <h2>Ejemplo Practico</h2>
+            <img src="/img/Problema de programación de tareas.png" width="500">
+                <p>Supongamos que tenemos estas tareas con sus horarios:</p>
+            <ul>
+                <li>Tarea A: 9:00 a 10:00</li>
+                <li>Tarea B: 9:30 a 11:00</li>
+                <li>Tarea C: 10:00 a 11:30</li>
+                <li>Tarea D: 11:00 a 12:00</li>
+                <li>Tarea E: 11:30 a 13:00</li>
+            </ul>
+                <p>Primero, ordenamos las tareas según su hora de finalización: A (10:00), B (11:00), C (11:30), D (12:00), E (13:00).
+                Seleccionamos la tarea que termina primero: la tarea A (9:00–10:00). Luego, elegimos la siguiente tarea que empiece después de las 10:00, que es la tarea C (10:00–11:30).
+                Después, buscamos la siguiente que comience después de las 11:30, que es la tarea E (11:30–13:00). No hay más tareas que encajen después de la 1:00 pm.
+                Así, el algoritmo selecciona las tareas A, C y E, maximizando el número de tareas sin que se superpongan.
+                 </p>
+          </section>
+          <!-- Fin de Ejemplo Practico -->
+
+    <!-- Área Interactiva -->
+    <form id="tareasForm">
+        <h2>Ingresa tus tareas</h2>
+
+        <div>
+        <label for="nombreTarea">Nombre de la tarea:</label>
+        <input type="text" id="nombreTarea" name="nombreTarea" required />
+        </div>
+
+        <div>
+        <label for="horaInicio">Hora de inicio (ejemplo: 09:00):</label>
+        <input type="time" id="horaInicio" name="horaInicio" required />
+        </div>
+
+        <div>
+        <label for="horaFin">Hora de fin (ejemplo: 10:00):</label>
+        <input type="time" id="horaFin" name="horaFin" required />
+        </div>
+
+        <button type="submit">Agregar tarea</button>
+    </form>
+
+    <h2>Lista de tareas ingresadas</h2>
+    <ul id="listaTareas">
+        <!-- Aquí se mostrarán las tareas ingresadas -->
+    </ul>
+
+    <h2>Resultado del algoritmo voraz</h2>
+     <!-- Área Interactiva -->
+    <footer>
+        <hr>
+            <p><strong>Integrantes del proyecto:</strong></p>
+        <ul>
+                <li>Osvin Jossue Alvarado Leiva - jossuealvarado29@gmail.com</li>
+                <li>Jose Camilo Alvarado Leiva - josecamilo2404@gmail.com</li>
+        </ul>
+    </footer>
+
+    <script src="/Js/IntervalScheduling.js"></script>
+</body>
+</html>
